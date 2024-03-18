@@ -60,6 +60,8 @@ The controllable displacement actuator moves the surface linearly from a maximum
 
 Measurements are taken of the distance between the surface to the sensor on the sensor board (DIS_C), and measurements are taken of the numerical signal received from ADC connected to the sensor board (SIG_N).
 
+It may be useful to filter the measurements to reduce noise.
+
 These pairs of measurements {DIS_C, SIG_N} are recorded at a set of N distances between the surface and the sensor on the sensor board (DIS_C). The measurement pairs are stored in a look-up table.
 
 There are N entries in the lookup table, where N is a positive integer. Each entry consists of the distance between the surface and the sensor (DIS_C) along with the sensor board output associated with that distance (SIG_N).
@@ -80,6 +82,8 @@ For examples of calculating the point at which the hammer hits the virtual strin
 
 During normal piano operation, each sensor board numerical output from the ADC (SIG_N) is converted to a distance value (DIS_H) by looking up the distance value (DIS_H) from the lookup table.
 
+If a match for SIG_N is not found in the table, then apply interpolation when converting SIG_N to DIS_H.
+
 The value DIS_H is used by PROC_P, for example calculating velocity or recording distances.
 
 During normal operation, depending on the mechanical tolerances, it is possible that only a subset the entire range of the lookup table is referenced during conversion of sensor output (SIG_N) to sensor-shank distance (DIS_H). For example, because of the physical distances for one of the sensors, the subset of the table for DIS_H from 0.25 to 0.75.
@@ -91,3 +95,5 @@ If the sensor errors and key-to-key variations are small enough to meet the requ
 The difference between the rest position and when hitting the virtual string is used to scale the velocity in order to normalize velocity values between keys, as because of physical variations each hammer or hammer shank or back of piano key will traverse a different distance to sensor.
 
 This all can be applied for dampers or hammers or any needed measurements.
+
+An alternative is to preform the calibration measurements while the sensors are mounted in the piano action. In this case, the controllable displacement actuator is moving a hammer shank or piano key.
