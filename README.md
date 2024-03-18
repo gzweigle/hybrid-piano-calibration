@@ -56,7 +56,7 @@ After each sensor board is built, connect the sensor board to the AFE and associ
 
 Place the sensor board in jig, separate from a piano action, with the sensor input facing a surface mounted to a controllable displacement actuator.
 
-The controllable displacement actuator moves the surface linearly from a maximum distance from the sensor, to a minimum distance from the sensor.
+The controllable displacement actuator moves the surface linearly from a maximum distance from the sensor, to a minimum distance from the sensor. The maximum distance (surface to sensor) should be larger than the maximum distance (piano hammer, shank, or back of key to sensor) when in the piano. The minimum distance (surface to sensor) should be smaller than the minimum distance (piano hammer, shank, or back of key to sensor) when in the piano.
 
 Measurements are taken of the distance between the surface to the sensor on the sensor board (DIS_C), and measurements are taken of the numerical signal received from ADC connected to the sensor board (SIG_N).
 
@@ -94,6 +94,6 @@ If the sensor errors and key-to-key variations are small enough to meet the requ
 
 The difference between the rest position and when hitting the virtual string is used to scale the velocity in order to normalize velocity values between keys, as because of physical variations each hammer or hammer shank or back of piano key will traverse a different distance to sensor.
 
-This all can be applied for dampers or hammers or any needed measurements.
+This all can be applied for dampers or hammers or any needed measurements. It is not limited only to piano hammers, piano shanks, or the back of piano keys.
 
 An alternative is to preform the calibration measurements while the sensors are mounted in the piano action. In this case, the controllable displacement actuator is moving a hammer shank or piano key.
