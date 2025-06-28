@@ -106,7 +106,7 @@ Because a PTS signal (504) is nearly two-level, an alternate embodiment to an AD
 
 The processing is described in detail later in this document. The system in Fig. 7 replicates for each hammer signal and for each key (used in part to calculate damper dynamics) signal.
 
-<img src="./pdps_fig7.jpg" alt="drawing" width="500"/>
+<img src="./pdps_fig7.jpg" alt="drawing" width="400"/>
 
 | Item | Name | Description |
 | - | - | - |
