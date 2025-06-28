@@ -2,7 +2,9 @@
 
 The open source hybrid piano [1][2] (*OSH Piano*, also known as *stem piano*) measures piano hammer and key positions, converts measurements to velocity, and outputs the results over MIDI. The piano system streams raw sampled hammer and key positions over Ethernet. The key positions are also used to infer damper position.
 
-The following describes a measurement and processing system including compensating for error sources. The following system is not open source nor included as part of an open source piano.
+The following describes a measurement and processing system including compensating for error sources.
+
+The following system is not open source nor included as part of an open source piano.
 
 Note that not all .md viewers show equation numbers. The text includes an equation number in description.
 
@@ -41,7 +43,7 @@ Side view of mechanical system and sensors at back of piano key.
 
 ## Fig. 3 Sensor System (104, 105, 106, 107)
 
-Top view of sensor system at hammer shank. Sensor system for piano key (204), (205), (206), and (207) is functionally identical with different geometries.
+Top view of sensor system at hammer shank. Sensor system for piano key (204), (205), (206), and (207) is functionally identical with different geometries. Components can locate at other positions along hammer shank. Fig. 3 shows one possible arrangement. The location depends on physical access, the transmitting and sensing range of PRS and PTS, and size of the optical gate (104) among other considerations. 
 
 <img src="./pdps_fig3.jpg" alt="drawing" width="400"/>
 
@@ -244,7 +246,7 @@ $$
 
 The following figure shows two experimental results and the quadratic-exponential curve fit. The top figures display overlapping measured and fitted data; the bottom figures show the difference between measured and fitted data. The fit is excellent except where the normalized ADC output indicates the sensor is very close to the reflective surface. Sharp spikes in the experimental data result from stepper motor noise.
 
-![experimental fit](./pdps_fig7.jpg)
+![experimental fit](./pdps_fig8.jpg)
 
 The horizontal axis is in units of seconds because the plot is response of sensor as the stepper motor moved the sensor toward a reflective surface (see the YouTube video link). The stepper motor moves the sensor at a fixed rate. This is equation (7).
 
@@ -297,7 +299,7 @@ The exponential model is simple, requires only two parameters per note, and supp
 
 The following figure shows two experimental results and the exponential curve fit. The top figures display overlapping measured and fitted data; the bottom figures show the difference between measured and fitted data. The fit is not as good as the quadratic-exponential fit. Again, the spikes in experimental data result from stepper motor noise.
 
-![experimental fit](./pdps_fig8.jpg)
+![experimental fit](./pdps_fig9.jpg)
 
 # 5. PDPS Operating Principle and Algorithm Development
 
